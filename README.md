@@ -46,3 +46,13 @@ Assume that amplitude over time can be expressed by a poynomial over the exponen
 ## future work
 
 it's now only tested on one simple audio and is restricted by noise in data. need more and purified data with high sr.
+
+## 振幅拟合的新思路
+
+寻找一个可数的线性基，使其span在C[0,+\infty]且f(+\infty)=0稠密
+
+考虑映射x\mapsto \exp(-x)将[0,+\infty]映射至[0,1]
+
+等同于考虑[-1,1]上的奇连续函数
+
+接下来用傅里叶级数来做，取sin项即可
