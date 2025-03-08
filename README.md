@@ -55,4 +55,18 @@ it's now only tested on one simple audio and is restricted by noise in data. nee
 
 等同于考虑[-1,1]上的奇连续函数
 
+注意到此处f(-1),f(1)不一定为0，导致时域上0+处的gibbs效应会很严重
+
 接下来用傅里叶级数来做，取sin项即可
+
+x\mapsto\exp(-x)的逆映射是x\mapsto -\log x, x\in[0,1]
+
+因此在时域下的基为\sin(\log n\pi x)和\cos(\log n\pi x)
+
+\cos(\log n\pi x)对应的项显然都是0，因为奇函数是正弦级数
+
+但是这俩在0+的极限不存在，不妨把时间都加上一个1e-10
+
+gibbs效应咋解决
+
+心情好了再严格化
